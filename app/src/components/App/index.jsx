@@ -2,7 +2,7 @@
  * Npm import
  */
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 /*
  * Local import
@@ -25,6 +25,9 @@ const App = () => (
     <Switch>
       <Route exact location={location} path="/" component={Shortener} />
       <Route exact location={location} path="/urls" component={Urls} />
+
+      {/* Useful for github pages */}
+      <Route render={() => <Redirect to="/" />} />
     </Switch>
   </div>
 );
