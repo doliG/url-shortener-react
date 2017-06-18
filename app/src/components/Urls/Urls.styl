@@ -1,0 +1,54 @@
+/**
+ * Colors
+ */
+$purple1 = #9b59b6
+$purple2 = #8e44ad
+$green1 = #2ecc71
+$green2 = #27ae60
+$grey1 = #7f8c8d
+
+/**
+ * Page and container
+ */
+#urls
+  font-family: 'Open Sans', sans-serif;
+  background-color: $purple2
+  min-height: 100vh
+  padding-bottom: 2em
+
+  &-container
+    max-width: 600px
+    margin: auto
+    padding-top: 5em
+
+    /**
+     * Url box
+     */
+    & .url
+      margin: 1em
+      background-color: white
+      border-radius: 5px
+
+      &-date
+        padding: 1em
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+        background-color: $green2
+        color: white
+
+      &-original
+        padding: 1em
+
+      &-shortened
+        padding: 0 1em 1em 1em
+
+      &-original
+      &-shortened
+        & span
+          color: $grey1
+          display: block
+          padding-bottom: 0.25em
+        & a
+          color: $green2
+          &:hover
+            color: $green1

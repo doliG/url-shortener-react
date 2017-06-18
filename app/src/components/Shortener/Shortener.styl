@@ -1,0 +1,88 @@
+/**
+ * Colors
+ */
+$yellow1 = #f39c12
+$blue1 = #3498db
+$blue2 = #2980b9
+$red1 = #e74c3c
+$lightgrey = #ecf0f9
+
+/**
+ * Code
+ */
+#shortener
+  background-color: $blue1
+  display: flex
+  padding: 1em
+  height: 100vh
+
+  &-container
+    width: 600px
+    margin: auto
+
+    /**
+     * Url form
+     */
+    &-form
+      &.error
+        animation: background-blink-error .5s ease-in-out
+
+    &-form
+    &-result
+      position: relative
+      margin: 1em 0
+
+      & input
+        width: 100%
+        padding: 1em
+        font-size: 1em
+        border: 1px solid $blue2
+        border-radius: 5em
+        background-color: $blue2
+        color: white
+        &:focus
+          border: 1px solid $yellow1
+        &::placeholder
+          color: $lightgrey
+
+      & button
+        position: absolute
+        width: 8em
+        top: 0px
+        right: 0px
+        padding: 1em
+        font-size: 1em
+        border: none
+        border-top-right-radius: 5em
+        border-bottom-right-radius: 5em
+        border: 1px solid $yellow1
+        background-color: $yellow1
+        color: white
+
+      &-result
+        & button
+          background-color: transparent
+          color: $yellow1
+
+/**
+ * Error animation
+ */
+@keyframes background-blink-error
+  0%
+    transform: translateX(0em);
+  12.5%
+    transform: translateX(1em);
+  25%
+    transform: translateX(0em);
+  37.5%
+    transform: translateX(-1em);
+  50%
+    transform: translateX(0em);
+  62.5%
+    transform: translateX(1em);
+  75%
+    transform: translateX(0em);
+  87.5%
+    transform: translateX(-1em);
+  100%
+    transform: translateX(0em);
